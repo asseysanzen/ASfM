@@ -1,4 +1,4 @@
-<div class="user_<%= user.id %>">
+<div class="user_<%= user.id %>"> <!-- 非同期通信のためのclass -->
 	<div class="icon">
 		<%= attachment_image_tag(user, :user_image, size: "200x200", fallback: asset_path('no_image.jpg')) %>
 	</div>
@@ -14,11 +14,13 @@
 	<div class="infomation">
 		<div class="content">
 			<div class="content_text">
+				<!-- 遷移先を登録したTwitterのアカウントにする -->
 				<%= link_to "#{user.twitter_account}", "https://twitter.com/#{user.twitter_account}", target: :_blank, class:"fab fa-twitter", :style=>"color:gray;"  %>
 			</div>
 		</div>
 		<div class="content">
 			<div class="content_text">
+				<!-- 遷移先を登録したInstagramのアカウントにする -->
 				<%= link_to "#{user.instagram_account}", "https://www.instagram.com/#{user.instagram_account}/", target: :_blank, class:"fab fa-instagram", :style=>"color:gray;" %>
 			</div>
 		</div>

@@ -20,7 +20,7 @@
 
 	<tbody>
 		<% users.each do |user| %>
-			<tr class="user_<%= user.id %>">
+			<tr class="user_<%= user.id %>"> <!-- 非同期通信のためのclass(tdにclassを付けるのではうまくいかない) -->
 				<%= render 'partials/users_content', user: user %>
 			</tr>
 		<% end %>
